@@ -1,0 +1,20 @@
+{%extends 'base.html'%}
+{{block.super}}
+
+{%block content%}
+<div class="container">
+  <div class="jumbotron">
+    <h1>Welcome to Api Query in Django</h1>
+    {%for i in records%}
+ <p><strong>Name:</strong>{{i.fields.Name}} <br>
+   <strong>Amount:</strong>{{i.fields.Amount}}<br>
+ <strong>Location:</strong>{{i.fields.Branch}}</p>
+
+
+    {%endfor%}
+
+
+  </div>
+
+</div>
+{%endblock%}
